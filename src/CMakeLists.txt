@@ -1,0 +1,6 @@
+add_subdirectory(contract)
+add_subdirectory(abort)
+add_subdirectory(noop)
+add_subdirectory(exception)
+add_subdirectory(switchable)
+add_subdirectory(extern)

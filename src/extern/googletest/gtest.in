@@ -1,0 +1,14 @@
+project(googletest-download NONE)
+ 
+include(ExternalProject)
+ExternalProject_Add(googletest
+    GIT_REPOSITORY      ${googletest_url}
+    GIT_TAG             ${googletet_version}
+    SOURCE_DIR          "${CMAKE_CURRENT_BINARY_DIR}/googletest-src"
+    BINARY_DIR          "${CMAKE_CURRENT_BINARY_DIR}/googletest-build"
+    UPDATE_DISCONNECTED 1
+    CONFIGURE_COMMAND   ""
+    BUILD_COMMAND       ""
+    INSTALL_COMMAND     ""
+    TEST_COMMAND        ""
+)

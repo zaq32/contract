@@ -1,0 +1,7 @@
+set(name contract_switchable)
+add_library(${name} STATIC Switchable.cpp ./include/contract/switchable.hpp)
+target_include_directories(${name} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_link_libraries(${name} PUBLIC contract)
+get_target_property(SOURCE_LIST ${name} SOURCES)
+source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${SOURCE_LIST})
+configure_library(${name})
